@@ -2,6 +2,7 @@ import { useMemo } from "react"
 import BudgetForm from "./components/BudgetForm"
 import { useBudget } from "./hooks/useBudget"
 import BudgetTracker from "./components/BudgetTracker"
+import ExpenseModal from "./components/ExpenseModal"
 
 
 function App() {
@@ -30,6 +31,15 @@ function App() {
         
         />}
      </div>
+     
+     {isValid && (
+      <main className="mx-auto py-10 max-w-3xl">
+        <ExpenseModal
+       
+        />
+      </main>
+     ) }
+     
      
     </>
   )
